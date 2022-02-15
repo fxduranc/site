@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Open+Sans&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed&display=swap');
+
+*{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+}
+
+.main{
+    display: flex;
+    font-size: 14px;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: bold;
+    justify-self: center;
+    margin: 15px 50px 15px 50px;
+    font-family: 'Merriweather', serif;
+}
+
+.pagename{
+    display: flex;
+    margin: 15px 50px 5px 50px;
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.separator{
+    display: flex;
+}
+
+.footer{
+    display: flex;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 13px;
+    justify-content: center;
+    margin: 25px 50px 25px 50px;
+    font-family: 'Merriweather', serif;
+}
+
+.navbar {
+    font-family: 'Open Sans', sans-serif;
+    margin-right: 50px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 16px;
+} 
+
+.logo{
+    display: inline-block; 
+    vertical-align: top;
+    padding: 20px;
+}
+
+.companyName{
+    display: flex;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    margin: 25px 0px 15px 0px;
+}
+
+.moto {
+    display: flex;
+    color:black;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    text-align: center;
+    display: column;
+    margin: 15px 0px 15px 0px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color:lightslategray;
+    width: 92%;
+    height: 100%;
+    justify-content: center;
+    justify-items:center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.body {
+    background-color:lightsteelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/*Ocultar menu en responsivo*/
+.submenuflex {
+    display: none;
+}
+
+/*Submenu desplegado en vertical - Aún no lo utilizo*/
+/*.submenuactivo:hover> .submenuflex {
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+}*/
+
+
+@media only screen and (max-width: 768px) {
+    #main {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 10px 150px 25px 20px 500px 25px 10px;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      grid-template-areas: "." "header" "pagename" "nav" "main" "footer";
+      justify-items: stretch;
+      align-items: stretch;
+    }
+
+    header {
+        background-color:lightslategray;
+    }
+
+    .header {
+        flex-direction: row;
+        background-color:lightslategray;
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer{
+        font-style: italic;
+        font-weight: bold;
+        font-size: 10px;
+        font-family: 'Merriweather', serif;
+    }
+
+    .pagename{
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .companyName{
+        display: flex;
+        display:inline-block;
+        align-content: left;
+        font-size: 30px;
+        font-weight: bold;
+        color: black;
+        font-family: 'Merriweather', serif;
+        text-align:center;
+    }
+    
+    .moto {
+        display: flex;
+        color:black;
+        font-family: 'Merriweather', serif;
+        font-size: 15px;
+        text-align: center;
+        display: column;
+    }
+
+    .redimension {
+        width:85%;
+        height:85%;
+    }
+
+    .logo{
+        vertical-align: top;
+    }
+
+    .navbar {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .main{
+        display: flex;
+        font-size: 12px;
+        flex-direction: column;
+        font-style: normal;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+    }
+
+  }
+
+  @media only screen and (max-width: 320px) {
+    #main {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 10px 130px 25px 20px 500px 25px 10px;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      grid-template-areas: "." "header" "pagename" "nav" "main" "footer";
+      justify-items: stretch;
+      align-items: stretch;
+    }
+
+    header {
+        background-color:lightslategray;
+    }
+
+    .header {
+        flex-direction: row;
+        background-color:lightslategray;
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer{
+        font-style: italic;
+        font-weight: bold;
+        font-size: 10px;
+        font-family: 'Merriweather', serif;
+    }
+
+    .pagename{
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .companyName{
+        display: flex;
+        display:inline-block;
+        align-content: left;
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        font-family: 'Merriweather', serif;
+        text-align:left;
+    }
+    
+    .moto {
+        display: flex;
+        color:black;
+        align-content: left;
+        font-family: 'Merriweather', serif;
+        font-size: 12px;
+        text-align: left;
+        display: column;
+    }
+
+    .redimension {
+        width:95%;
+        height:85%;
+    }
+
+    .logo{
+        vertical-align: top;
+    }
+
+    .navbar {
+        display: none;
+    }
+    
+    .main{
+        font-size: 12px;
+        flex-direction: column;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+        text-align: justify;
+    }
+
+    .menu-btn{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        transition: all .5s ease-in-out;
+        border: 2px solid #fff
+    }
+
+    .menu-btn___burger {
+        width: 40px;
+        height: 30px;
+        background: #fff;
+        border-radius: 2px;
+        box-shadow: 0 2 px 5px rgba(255, 101, 47, .2);
+        transition: all .5s ease-in-out;
+
+    }
+    
+  }
+
+  @media only screen and (max-width: 1200px) {
+    #main {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10px 200px 25px 20px 500px 25px 10px;
+    grid-template-areas: "none none none" ". header ." ". pagename ." ". nav ." ". main ." ". footer .";
+    grid-row-gap: 10px;
+    justify-items: stretch;
+    align-items: stretch;
+    }
+
+    header {
+        background-color:lightslategray;
+    }
+
+    .header {
+        flex-direction: row;
+        background-color:lightslategray;
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer{
+        font-style: italic;
+        font-weight: bold;
+        font-size: 10px;
+        font-family: 'Merriweather', serif;
+    }
+
+    .pagename{
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .companyName{
+        display: flex;
+        display:inline-block;
+        align-content: left;
+        font-size: 30px;
+        font-weight: bold;
+        color: black;
+        font-family: 'Merriweather', serif;
+        text-align:center;
+    }
+    
+    .moto {
+        display: flex;
+        color:black;
+        font-family: 'Merriweather', serif;
+        font-size: 15px;
+        text-align: center;
+        display: column;
+    }
+
+    .redimension {
+        width:85%;
+        height:85%;
+    }
+
+    .logo{
+        vertical-align: top;
+    }
+
+    .navbar {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .main{
+        display: flex;
+        font-size: 12px;
+        flex-direction: column;
+        font-style: normal;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+    }
+
+  }
+
+#main{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10px 200px 25px 20px 500px 25px 10px;
+    grid-template-areas: "none none none" ". header ." ". pagename ." ". nav ." ". main ." ". footer .";
+    grid-row-gap: 10px;
+}
+
+header{
+    grid-area: header;
+}
+
+#pagename{
+    grid-area: pagename;
+}
+
+nav{
+    grid-area: nav;
+}
+
+main{
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.headergrid{
+    display: grid;
+}
+
+.maingrid{
+    display: grid;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+  }
+  
