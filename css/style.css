@@ -8,13 +8,13 @@
 }
 
 .main{
-    display: flex;
+    display:inline;
     font-size: 14px;
     flex-direction: column;
     font-style: normal;
     font-weight: bold;
     justify-self: center;
-    margin: 15px 50px 15px 50px;
+    /*margin: 15px 50px 15px 50px;*/
     font-family: 'Merriweather', serif;
 }
 
@@ -51,7 +51,8 @@
 .logo{
     display: inline-block; 
     vertical-align: top;
-    padding: 20px;
+    padding: 10px;
+    margin-top: 20px;
 }
 
 .companyName{
@@ -72,19 +73,19 @@
     font-size: 18px;
     text-align: center;
     display: column;
-    margin: 15px 0px 15px 0px;
+    margin: 15px px 15px 0px;
 }
 
 .header {
     display: flex;
     flex-direction: row;
     background-color:lightslategray;
-    width: 92%;
+    width: 100%;
     height: 100%;
     justify-content: center;
     justify-items:center;
-    margin-left: 50px;
-    margin-right: 50px;
+    /*margin-left: 50px;
+    margin-right: 50px;*/
     animation-name: animacionLogo;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
@@ -105,18 +106,107 @@
     justify-content: space-evenly;
 }
 
-/*Ocultar menu en responsivo*/
-.submenuflex {
-    display: none;
-}
+@media only screen and (max-width: 320px) {
+    #main {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 10px 130px 25px 20px 500px 25px 10px;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      grid-template-areas: "." "header" "pagename" "nav" "main" "footer";
+      justify-items: stretch;
+      align-items: stretch;
+    }
 
-/*Submenu desplegado en vertical - Aún no lo utilizo*/
-/*.submenuactivo:hover> .submenuflex {
-    display:flex;
-    flex-direction: column;
-    position: absolute;
-}*/
+    header {
+        background-color:lightslategray;
+    }
 
+    .header {
+        flex-direction: row;
+        background-color:lightslategray;
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer{
+        font-style: italic;
+        font-weight: bold;
+        font-size: 10px;
+        font-family: 'Merriweather', serif;
+    }
+
+    .pagename{
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 15px 0px 15px 0px;
+    }
+
+    .companyName{
+        display: flex;
+        display:inline-block;
+        align-content: left;
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        font-family: 'Merriweather', serif;
+        text-align:left;
+    }
+    
+    .moto {
+        display: flex;
+        color:black;
+        align-content: left;
+        font-family: 'Merriweather', serif;
+        font-size: 12px;
+        text-align: left;
+        display: column;
+    }
+
+    .redimension {
+        width:95%;
+        height:85%;
+    }
+
+    .logo{
+        vertical-align: top;
+    }
+
+    .navbar {
+        display: none;
+    }
+    
+    .main{
+        font-size: 12px;
+        flex-direction: column;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+        text-align: justify;
+    }
+
+    .menu-btn{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        transition: all .5s ease-in-out;
+        border: 2px solid #fff
+    }
+
+    .menu-btn___burger {
+        width: 40px;
+        height: 30px;
+        background: #fff;
+        border-radius: 2px;
+        box-shadow: 0 2 px 5px rgba(255, 101, 47, .2);
+        transition: all .5s ease-in-out;
+
+    }
+    
+  }
 
 @media only screen and (max-width: 768px) {
     #main {
@@ -196,85 +286,6 @@
         font-style: normal;
         font-weight: bold;
         font-family: 'Merriweather', serif;
-    }
-
-  }
-
-  @media only screen and (max-width: 320px) {
-    #main {
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: 10px 130px 25px 20px 500px 25px 10px;
-      grid-column-gap: 10px;
-      grid-row-gap: 10px;
-      grid-template-areas: "." "header" "pagename" "nav" "main" "footer";
-      justify-items: stretch;
-      align-items: stretch;
-    }
-
-    header {
-        background-color:lightslategray;
-    }
-
-    .header {
-        flex-direction: row;
-        background-color:lightslategray;
-        width: 100%;
-        height: 100%;
-    }
-
-    .footer{
-        font-style: italic;
-        font-weight: bold;
-        font-size: 10px;
-        font-family: 'Merriweather', serif;
-    }
-
-    .pagename{
-        font-family: 'Merriweather', serif;
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    .companyName{
-        display: flex;
-        display:inline-block;
-        align-content: left;
-        font-size: 20px;
-        font-weight: bold;
-        color: black;
-        font-family: 'Merriweather', serif;
-        text-align:left;
-    }
-    
-    .moto {
-        display: flex;
-        color:black;
-        align-content: left;
-        font-family: 'Merriweather', serif;
-        font-size: 12px;
-        text-align: left;
-        display: column;
-    }
-
-    .redimension {
-        width:95%;
-        height:85%;
-    }
-
-    .logo{
-        vertical-align: top;
-    }
-
-    .navbar {
-        display: none;
-    }
-    
-    .main{
-        font-size: 12px;
-        flex-direction: column;
-        font-weight: bold;
-        font-family: 'Merriweather', serif;
         text-align: justify;
     }
 
@@ -301,7 +312,7 @@
     
   }
 
-  @media only screen and (max-width: 1200px) {
+ @media only screen and (max-width: 1200px) {
     #main {
     display: grid;
     grid-template-columns: 10% 80% 10%;
@@ -380,6 +391,12 @@
         font-family: 'Merriweather', serif;
     }
 
+    .navbarflex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
   }
 
 #main{
@@ -418,13 +435,6 @@ footer {
     display: grid;
 }
 
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
-  }
-   
-}
-
 #header {
     animation-name: animacionLogo;
     animation-iteration-count: infinite;
@@ -438,15 +448,15 @@ footer {
         background-color: rgb(167, 160, 160);
     }
     25% {
-        background-color: rgb(151, 147, 147);
+        background-color: rgb(189, 181, 181);
     }
     50% {
-        background-color: rgb(105, 101, 101);
+        background-color: rgb(141, 136, 136);
     }
     75% {
-        background-color: rgb(53, 49, 49);
+        background-color: rgb(136, 131, 131);
     }
     100% {
-        background-color: rgb(32, 31, 31);
+        background-color: rgb(109, 101, 101);
     }
 }
