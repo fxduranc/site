@@ -42,10 +42,11 @@
 
 .navbar {
     font-family: 'Open Sans', sans-serif;
-    margin-right: 50px;
+    /*margin-right: 50px;*/
     padding: 0px;
     font-weight: bold;
-    font-size: 16px;
+    /*font-size: 16px;*/
+    
 } 
 
 .logo{
@@ -73,7 +74,6 @@
     font-size: 18px;
     text-align: center;
     display: column;
-    margin: 15px px 15px 0px;
 }
 
 .header {
@@ -100,13 +100,8 @@
     align-items: center;
 }
 
-.navbarflex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
 
-@media only screen and (max-width: 320px) {
+@media only screen and (min-width: 200px) and (max-width: 319px) {
     #main {
       display: grid;
       grid-template-columns: auto;
@@ -151,7 +146,7 @@
         font-weight: bold;
         color: black;
         font-family: 'Merriweather', serif;
-        text-align:left;
+        text-align:center;
     }
     
     .moto {
@@ -160,7 +155,7 @@
         align-content: left;
         font-family: 'Merriweather', serif;
         font-size: 12px;
-        text-align: left;
+        text-align: center;
         display: column;
     }
 
@@ -170,7 +165,8 @@
     }
 
     .logo{
-        vertical-align: top;
+        display: none;
+        /*vertical-align: top;*/
     }
 
     .navbar {
@@ -185,30 +181,245 @@
         text-align: justify;
     }
 
-    .menu-btn{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        transition: all .5s ease-in-out;
-        border: 2px solid #fff
+    .form{
+        
     }
 
-    .menu-btn___burger {
-        width: 40px;
-        height: 30px;
-        background: #fff;
-        border-radius: 2px;
-        box-shadow: 0 2 px 5px rgba(255, 101, 47, .2);
-        transition: all .5s ease-in-out;
-
+    .hamburger-menu{
+        display:flexbox;
+    }
+    
+    #menu__toggle {
+      opacity: 0;
+    }
+    #menu__toggle:checked + .menu__btn > span {
+      transform: rotate(45deg);
+    }
+    #menu__toggle:checked + .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0deg);
+    }
+    #menu__toggle:checked + .menu__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+      left: 0 !important;
+    }
+    .menu__btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #616161;
+      transition-duration: .25s;
+    }
+    .menu__btn > span::before {
+      content: '';
+      top: -8px;
+    }
+    .menu__btn > span::after {
+      content: '';
+      top: 8px;
+    }
+    .menu__box {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 300px;
+      height: 100%;
+      margin: 0;
+      padding: 80px 0;
+      list-style: none;
+      background-color: #ECEFF1;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+      transition-duration: .25s;
+    }
+    .menu__item {
+      display: block;
+      padding: 12px 24px;
+      color: #333;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      transition-duration: .25s;
+    }
+    .menu__item:hover {
+      background-color: #CFD8DC;
     }
     
   }
 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+    #main {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 10px 130px 25px 20px 500px 25px 10px;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      grid-template-areas: "." "header" "pagename" "nav" "main" "footer";
+      justify-items: stretch;
+      align-items: stretch;
+    }
+
+    header {
+        background-color:lightslategray;
+    }
+
+    .header {
+        flex-direction: row;
+        background-color:lightslategray;
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer{
+        font-style: italic;
+        font-weight: bold;
+        font-size: 10px;
+        font-family: 'Merriweather', serif;
+    }
+
+    .pagename{
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 15px 0px 15px 0px;
+    }
+
+    .companyName{
+        display: flex;
+        display:inline-block;
+        align-content: left;
+        font-size: 25px;
+        font-weight: bold;
+        color: black;
+        font-family: 'Merriweather', serif;
+        text-align:center;
+    }
+    
+    .moto {
+        display: flex;
+        color:black;
+        align-content: left;
+        font-family: 'Merriweather', serif;
+        font-size: 12px;
+        text-align: center;
+        display: column;
+    }
+
+    .redimension {
+        width:95%;
+        height:85%;
+    }
+
+    .logo{
+        display: none;
+        /*vertical-align: top;*/
+    }
+
+    .navbar {
+        display: none;
+    }
+    
+    .main{
+        font-size: 12px;
+        flex-direction: column;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+        text-align: justify;
+    }
+
+    .hamburger-menu{
+        display:flexbox;
+    }
+    
+    #menu__toggle {
+      opacity: 0;
+    }
+    #menu__toggle:checked + .menu__btn > span {
+      transform: rotate(45deg);
+    }
+    #menu__toggle:checked + .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0deg);
+    }
+    #menu__toggle:checked + .menu__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+      left: 0 !important;
+    }
+    .menu__btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #616161;
+      transition-duration: .25s;
+    }
+    .menu__btn > span::before {
+      content: '';
+      top: -8px;
+    }
+    .menu__btn > span::after {
+      content: '';
+      top: 8px;
+    }
+    .menu__box {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 300px;
+      height: 100%;
+      margin: 0;
+      padding: 80px 0;
+      list-style: none;
+      background-color: #ECEFF1;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+      transition-duration: .25s;
+    }
+    .menu__item {
+      display: block;
+      padding: 12px 24px;
+      color: #333;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      transition-duration: .25s;
+    }
+    .menu__item:hover {
+      background-color: #CFD8DC;
+    }
+  }
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
     #main {
       display: grid;
       grid-template-columns: auto;
@@ -274,45 +485,86 @@
     }
 
     .navbar {
-        font-family: 'Open Sans', sans-serif;
-        font-weight: bold;
-        font-size: 15px;
+        display: none;
+    }
+
+    .hamburger-menu{
+        display:flexbox;
     }
     
-    .main{
-        display: flex;
-        font-size: 12px;
-        flex-direction: column;
-        font-style: normal;
-        font-weight: bold;
-        font-family: 'Merriweather', serif;
-        text-align: justify;
+    #menu__toggle {
+      opacity: 0;
     }
-
-    .menu-btn{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        transition: all .5s ease-in-out;
-        border: 2px solid #fff
+    #menu__toggle:checked + .menu__btn > span {
+      transform: rotate(45deg);
     }
-
-    .menu-btn___burger {
-        width: 40px;
-        height: 30px;
-        background: #fff;
-        border-radius: 2px;
-        box-shadow: 0 2 px 5px rgba(255, 101, 47, .2);
-        transition: all .5s ease-in-out;
-
+    #menu__toggle:checked + .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0deg);
     }
-    
+    #menu__toggle:checked + .menu__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+      left: 0 !important;
+    }
+    .menu__btn {
+      position:fixed;
+      top: 30px;
+      left: 30px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #616161;
+      transition-duration: .25s;
+    }
+    .menu__btn > span::before {
+      content: '';
+      top: -8px;
+    }
+    .menu__btn > span::after {
+      content: '';
+      top: 8px;
+    }
+    .menu__box {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 300px;
+      height: 100%;
+      margin: 0;
+      padding: 80px 0;
+      list-style: none;
+      background-color: #ECEFF1;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+      transition-duration: .25s;
+    }
+    .menu__item {
+      display: block;
+      padding: 12px 24px;
+      color: #333;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      transition-duration: .25s;
+    }
+    .menu__item:hover {
+      background-color: #CFD8DC;
+    }
   }
 
- @media only screen and (max-width: 1200px) {
+ @media only screen and (min-width: 769px) and (max-width: 1200px) {
     #main {
     display: grid;
     grid-template-columns: 10% 80% 10%;
@@ -365,7 +617,7 @@
         font-size: 15px;
         text-align: center;
         display: column;
-    }
+     }
 
     .redimension {
         width:85%;
@@ -391,10 +643,190 @@
         font-family: 'Merriweather', serif;
     }
 
-    .navbarflex {
-        display: flex;
+    .hamburger-menu{
+        display: none;
+    }
+
+    .button{
+        display: none;
+    }
+
+  }
+
+  @media only screen and (min-width: 1201px) and (max-width: 1900px) {
+    #main {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10px 200px 25px 20px 500px 25px 10px;
+    grid-template-areas: "none none none" ". header ." ". pagename ." ". nav ." ". main ." ". footer .";
+    grid-row-gap: 10px;
+    justify-items: stretch;
+    align-items: stretch;
+    }
+
+    header {
+        background-color:lightslategray;
+    }
+
+    .header {
         flex-direction: row;
-        justify-content: space-evenly;
+        background-color:lightslategray;
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer{
+        font-style: italic;
+        font-weight: bold;
+        font-size: 10px;
+        font-family: 'Merriweather', serif;
+    }
+
+    .pagename{
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .companyName{
+        display: flex;
+        display:inline-block;
+        align-content: left;
+        font-size: 30px;
+        font-weight: bold;
+        color: black;
+        font-family: 'Merriweather', serif;
+        text-align:center;
+    }
+    
+    .moto {
+        display: flex;
+        color:black;
+        font-family: 'Merriweather', serif;
+        font-size: 15px;
+        text-align: center;
+        display: column;
+     }
+
+    .redimension {
+        width:85%;
+        height:85%;
+    }
+
+    .logo{
+        vertical-align: top;
+    }
+
+    .navbar {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .main{
+        display: flex;
+        font-size: 12px;
+        flex-direction: column;
+        font-style: normal;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+    }
+
+    .hamburger-menu{
+        display: none;
+    }
+
+    .button{
+        display: none;
+    }
+
+  }
+
+  @media only screen and (min-width: 1901px) and (max-width: 2400px) {
+    #main {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10px 200px 25px 20px 500px 25px 10px;
+    grid-template-areas: "none none none" ". header ." ". pagename ." ". nav ." ". main ." ". footer .";
+    grid-row-gap: 10px;
+    justify-items: stretch;
+    align-items: stretch;
+    }
+
+    header {
+        background-color:lightslategray;
+    }
+
+    .header {
+        flex-direction: row;
+        background-color:lightslategray;
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer{
+        font-style: italic;
+        font-weight: bold;
+        font-size: 10px;
+        font-family: 'Merriweather', serif;
+    }
+
+    .pagename{
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .companyName{
+        display: flex;
+        display:inline-block;
+        align-content: left;
+        font-size: 30px;
+        font-weight: bold;
+        color: black;
+        font-family: 'Merriweather', serif;
+        text-align:center;
+    }
+    
+    .moto {
+        display: flex;
+        color:black;
+        font-family: 'Merriweather', serif;
+        font-size: 15px;
+        text-align: center;
+        display: column;
+     }
+
+    .redimension {
+        width:85%;
+        height:85%;
+    }
+
+    .logo{
+        vertical-align: top;
+    }
+
+    .navbar {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .main{
+        display: flex;
+        font-size: 12px;
+        flex-direction: column;
+        font-style: normal;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+    }
+
+    .hamburger-menu{
+        display: none;
+    }
+
+    .button{
+        display: none;
     }
 
   }
@@ -402,8 +834,8 @@
 #main{
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 10px 200px 25px 20px 500px 25px 10px;
-    grid-template-areas: "none none none" ". header ." ". pagename ." ". nav ." ". main ." ". footer .";
+    grid-template-rows: 10px 200px 25px 20px 500px 550px 10px;
+    grid-template-areas: "none none none" ". header ." ". pagename ." ". nav ." ". main ." ". main ." ". footer .";
     grid-row-gap: 10px;
 }
 
@@ -435,28 +867,8 @@ footer {
     display: grid;
 }
 
-#header {
-    animation-name: animacionLogo;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-duration: 2s;
-    animation-delay: 5s;
+.button {
+    display: none;
 }
 
-@keyframes animacionLogo {
-    0% {
-        background-color: rgb(167, 160, 160);
-    }
-    25% {
-        background-color: rgb(189, 181, 181);
-    }
-    50% {
-        background-color: rgb(141, 136, 136);
-    }
-    75% {
-        background-color: rgb(136, 131, 131);
-    }
-    100% {
-        background-color: rgb(109, 101, 101);
-    }
-}
+
