@@ -46,7 +46,6 @@
     padding: 0px;
     font-weight: bold;
     /*font-size: 16px;*/
-    
 } 
 
 .logo{
@@ -105,10 +104,10 @@
     #main {
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: 10px 130px 25px 20px 500px 25px 10px;
+      grid-template-rows: 10px 130px 25px 20px 500px 1500px 10px;
       grid-column-gap: 10px;
       grid-row-gap: 10px;
-      grid-template-areas: "." "header" "pagename" "nav" "main" "footer";
+      grid-template-areas: "." "header" "pagename" "nav" "main" "main" "footer";
       justify-items: stretch;
       align-items: stretch;
     }
@@ -129,6 +128,10 @@
         font-weight: bold;
         font-size: 10px;
         font-family: 'Merriweather', serif;
+    }
+
+    .nowrap {
+        white-space: nowrap ;
     }
 
     .pagename{
@@ -267,10 +270,10 @@
     #main {
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: 10px 130px 25px 20px 500px 25px 10px;
+      grid-template-rows: 10px 130px 25px 20px 500px 100px 10px;
       grid-column-gap: 10px;
       grid-row-gap: 10px;
-      grid-template-areas: "." "header" "pagename" "nav" "main" "footer";
+      grid-template-areas: "." "header" "pagename" "nav" "main" "main" "footer";
       justify-items: stretch;
       align-items: stretch;
     }
@@ -289,8 +292,12 @@
     .footer{
         font-style: italic;
         font-weight: bold;
-        font-size: 10px;
+        font-size: 8px;
         font-family: 'Merriweather', serif;
+    }
+
+    .nowrap {
+      white-space: nowrap ;
     }
 
     .pagename{
@@ -423,10 +430,10 @@
     #main {
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: 10px 150px 25px 20px 500px 25px 10px;
+      grid-template-rows: 10px 150px 25px 20px 500px 500px 10px;
       grid-column-gap: 10px;
       grid-row-gap: 10px;
-      grid-template-areas: "." "header" "pagename" "nav" "main" "footer";
+      grid-template-areas: "." "header" "pagename" "nav" "main" "main" "footer";
       justify-items: stretch;
       align-items: stretch;
     }
@@ -477,7 +484,7 @@
 
     .redimension {
         width:85%;
-        height:85%;
+        height:65%;
     }
 
     .logo{
@@ -568,8 +575,8 @@
     #main {
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 10px 200px 25px 20px 500px 25px 10px;
-    grid-template-areas: "none none none" ". header ." ". pagename ." ". nav ." ". main ." ". footer .";
+    grid-template-rows: 10px 200px 25px 20px 500px 500px 10px;
+    grid-template-areas: "none none none" ". header ." ". pagename ." ". nav ." ". main ." ". main ." ". footer .";
     grid-row-gap: 10px;
     justify-items: stretch;
     align-items: stretch;
@@ -657,8 +664,8 @@
     #main {
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 10px 200px 25px 20px 500px 25px 10px;
-    grid-template-areas: "none none none" ". header ." ". pagename ." ". nav ." ". main ." ". footer .";
+    grid-template-rows: 10px 200px 25px 20px 500px 500px 10px;
+    grid-template-areas: "none none none" ". header ." ". pagename ." ". nav ." ". main ." ". main ." ". footer .";
     grid-row-gap: 10px;
     justify-items: stretch;
     align-items: stretch;
@@ -746,8 +753,8 @@
     #main {
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 10px 200px 25px 20px 500px 25px 10px;
-    grid-template-areas: "none none none" ". header ." ". pagename ." ". nav ." ". main ." ". footer .";
+    grid-template-rows: 10px 200px 25px 20px 500px 500px 10px;
+    grid-template-areas: "none none none" ". header ." ". pagename ." ". nav ." ". main ." ". main ." ". footer .";
     grid-row-gap: 10px;
     justify-items: stretch;
     align-items: stretch;
