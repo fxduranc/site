@@ -112,9 +112,9 @@
       align-items: stretch;
     }
 
-    header {
+    /* header {
         background-color:lightslategray;
-    }
+    } */
 
     .header {
         flex-direction: row;
@@ -878,4 +878,7 @@ footer {
     display: none;
 }
 
-
+header {
+  background-color: dimgrey; }
+  header p {
+    color: wheat; }
