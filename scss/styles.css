@@ -1,0 +1,72 @@
+a, a:active, a:hover, a:visited {
+  color: rgba(13, 117, 253, 0.718);
+  text-decoration: underline;
+}
+
+a:active, a:hover {
+  color: blue;
+}
+
+.module a, .module a:active, .module a:hover, .module a:visited {
+  color: blue;
+  text-decoration: underline;
+}
+
+header {
+  background-color: dimgrey;
+}
+
+header p {
+  color: #131211;
+}
+
+.redesSociales {
+  height: 200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn, .newButton {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.whatsapp {
+  background-color: #4dc247;
+}
+
+.youtube {
+  background-color: #bb0000;
+}
+
+.newButton {
+  background-color: #3b5998;
+}
+
+.btn-1 {
+  font-weight: bold;
+  text-decoration: underline;
+  -webkit-text-decoration-color: white;
+          text-decoration-color: white;
+  -webkit-text-decoration-style: double;
+          text-decoration-style: double;
+}
+/*# sourceMappingURL=styles.css.map */

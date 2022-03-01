@@ -1,0 +1,89 @@
+$tamanoBoton: 50px;
+$tamañoTipo: 20px;
+$redes: (facebook: #3b5998, whatsapp: #4dc247, youtube: #bb0000);
+
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+ 
+#{$a-tags} {
+  color: hsla(214, 98%, 52%, 0.718);
+  text-decoration: underline;
+}
+#{$a-tags-hover} {
+  color: blue;
+}
+
+.module {
+    #{$a-tags} {
+      color: blue;
+      text-decoration: underline;
+    } 
+  }
+
+  @mixin linx ($link, $visit, $hover, $active) {
+    a {
+      color: $link;
+      &:visited {
+        color: $visit;
+      }
+      &:hover {
+        color: $hover;   
+      }
+      &:active {
+        color: $active;
+      }
+    }
+  }
+
+header {
+    background-color: dimgrey;
+
+    p {
+        color:rgb(19, 18, 17);
+    }
+}
+
+.redesSociales{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn {
+    border-radius: 50%;
+    width: $tamanoBoton;
+    height: $tamanoBoton;
+    font-size: $tamañoTipo;
+
+}
+
+@each $red, $color in $redes {
+    .#{$red}{
+        background-color: $color;
+    }
+    
+}
+
+.newButton{
+    background-color: map-get($redes, facebook );
+    @extend .btn;
+    
+}
+
+@mixin bold {
+    font-weight: bold;
+}
+
+@mixin underline($color) {
+    text-decoration: underline;
+    text-decoration-color: $color;
+    text-decoration-style: double;
+}
+
+.btn-1{
+    @include bold;
+    @include underline(rgb(255,255,255));
+}
